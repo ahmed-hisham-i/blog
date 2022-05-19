@@ -1,0 +1,12 @@
+<h1> this is the new article page </h1>
+
+<h2> create article </h2>
+
+<%=form_for @article do |f|%>
+
+<p>
+
+<%=f.label :title%> <br>
+<%= f.text_field :title%>
+
+<% end %>
