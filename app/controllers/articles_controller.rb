@@ -18,8 +18,23 @@ class ArticlesController < ApplicationController
         end 
     end
 
+    def edit
+        @article = Article.find(params[:id])
+    end
+
+    def update
+        @article = Article.find(params[:id])    
+    end
+
     def show 
         @article = Article.find(params[:id])
+        if @article.update(article_params)
+            flash[:notice] = "article was updated"
+            redirect_to articles_path(@article)
+        else
+            flash[:notice] = "article was not updated"
+            render 'edit'
+        end
     end
 
     private
