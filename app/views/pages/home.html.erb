@@ -1,3 +1,16 @@
-<h1> Welcome to the home page </h1>
+<div align="center">
+    <h1 style="font-weight:bold;"> Welcome to the home page </h1>
 
-<%=link_to "Alpha Blog", articles_path %> 
+
+    <div class="article-title">
+        <%=link_to "Alpha Blog", articles_path %> 
+    </div>
+
+    <div class="article-title">
+        <%=link_to "sign in", login_path %>
+    </div>
+
+    <div class="article-title">
+        <%=link_to "sign up", signup_path %>
+    </div>
+</div>
